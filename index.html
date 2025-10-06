@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Custom Umbrella</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="theme-blue">
+    <main class="page">
+      <div class="dots" aria-hidden="true"></div>
+
+      <section class="stage">
+        <div class="canvas" id="canvas">
+          <img
+            id="umbrellaImg"
+            class="umbrella"
+            alt="Umbrella"
+            src="./assets/Blue umbrella.png"
+          />
+
+          
+          <div id="loader" class="loader" hidden>
+            <svg viewBox="0 0 64 64" fill="none" stroke-width="3.5">
+              <path
+                d="M32 8
+            C37 9, 43 13, 48.7 9.8
+            C55 6.1, 62 16.5, 58 24.8
+            C54.7 31.6, 60.8 38.2, 55 44.5
+            C50 48.5, 44 45.4, 40 50.8
+            C36.2 56.4, 26.1 56.4, 21.8 50.6
+            C17.6 44.5, 12.5 48.4, 8.8 44
+            C4.1 38.7, 10.3 30.3, 6.3 24.9
+            C2 19, 8.9 6.5, 18.6 9.7
+            C23.6 11.5, 27.4 9, 32 8Z"
+                stroke="currentColor"
+              />
+              <path d="M32 8 V56" stroke="currentColor" />
+              <path d="M18 13 L32 32" stroke="currentColor" />
+              <path d="M32 32 L55 18" stroke="currentColor" />
+              <path d="M32 32 L26 56" stroke="currentColor" />
+              <path d="M32 32 L44 52" stroke="currentColor" />
+              <path d="M32 32 L9 24" stroke="currentColor" />
+            </svg>
+          </div>
+
+          
+          <div id="logoZone" class="logo-zone" aria-label="Logo placement">
+            <img id="logoImg" class="logo-img" alt="" hidden />
+          </div>
+        </div>
+
+       
+        <aside class="panel">
+          <h1>Custom Umbrella</h1>
+
+          <div class="subtle">Choose color</div>
+          <div class="swatches" role="group" aria-label="Umbrella color">
+            <button
+              class="swatch blue"
+              data-color="blue"
+              aria-pressed="true"
+              title="Blue"
+            ></button>
+            <button
+              class="swatch pink"
+              data-color="pink"
+              aria-pressed="false"
+              title="Pink"
+            ></button>
+            <button
+              class="swatch yellow"
+              data-color="yellow"
+              aria-pressed="false"
+              title="Yellow"
+            ></button>
+          </div>
+
+          <div class="subtle">Customize your umbrella</div>
+          <p class="hint">
+            Upload a logo for an instant preview at the bottom panel area of the
+            canopy.
+          </p>
+          <p class="hint">.png and .jpg files only. Max file size is 5MB.</p>
+
+          <div class="actions">
+            <button id="uploadBtn" class="btn" type="button">
+              <span class="fake-upload-icon" aria-hidden="true"></span>
+              <span>Upload logo</span>
+            </button>
+            <input id="fileInput" type="file" accept=".png,.jpg,.jpeg" hidden />
+            <button id="clearBtn" class="btn secondary" type="button">
+              Clear
+            </button>
+            <button
+              id="downloadBtn"
+              class="btn secondary"
+              type="button"
+              title="Download preview PNG"
+            >
+              Download
+            </button>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
